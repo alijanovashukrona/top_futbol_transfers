@@ -1,0 +1,11 @@
+html
+{% extends 'base.html' %}
+
+{% block content %}
+  {% include 'headers.html' %}
+  <ul>
+    {% for player in players %}
+      <li>{{ player.name }} - {{ player.age }} years old - {{ player.position }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
